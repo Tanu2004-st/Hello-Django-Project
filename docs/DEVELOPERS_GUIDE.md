@@ -19,6 +19,15 @@ To build a centralized student dashboard displaying:
 
 ---
 
+## 🚀 Developer Quick Start
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/GoUpTech/school-management-system.git
+cd school-management-system
+```
+
 ## 🌿 Branch Setup
 
 Each developer should start from the latest `dev` branch.
@@ -228,6 +237,21 @@ If you’ve already set up your local environment previously, here’s what to d
    ```
 
 ✅ You’re now synced and ready to continue development exactly where you left off.
+
+```bash
+# move to the dev branch
+git checkout dev
+git pull origin dev
+
+# if you are working different branch then switch to that branch
+git checkout branch-name
+git pull origin branch-name
+
+# after changing/creatting/modifying the files commit the code on github by doing these commands
+git add .
+git commit -m "message for chnages"
+git push
+```
 
 > 🏁 **Goal:** Smooth and modular development of the feature of School-Managements-System — clean commits, independent work, and seamless integration.
 
