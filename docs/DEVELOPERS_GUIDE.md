@@ -47,16 +47,16 @@ Each developer should start from the latest `dev` branch.
 git checkout dev
 git pull origin dev
 
-# Create your feature branch
-git checkout -b yourname-feature/student-dashboard
-git push -u origin yourname-feature/student-dashboard
+# Create your own feature branch
+git checkout -b yourname-feature/student-dashboard-frontend
+git push -u origin yourname-feature/student-dashboard-frontend
 ```
 
 And make changes or create files and then commit all the changes and push into the github make sure you are into your branch to go your branch (git checkout your-branch-name)
 ```bash
 git checkout your-branch-name
 git add .
-git commit -m "your commit message"
+git commit -m "feat: your commit message"
 git push
 ```
 
