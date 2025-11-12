@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+{% load static %}
+
+<!-- Hero Image -->
+<div class="container-fluid px-0 mb-5 position-relative">
+  <img 
+    src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0" 
+    alt="Contact us" 
+    class="w-100" 
+    style="height:400px; object-fit:cover;">
+  <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+    <h1 class="display-4 fw-bold text-shadow">Get in Touch with Us</h1>
+  </div>
+</div>
+
+<!-- Contact Form -->
+<div class="d-flex justify-content-center align-items-center mb-5">
+  <div class="container" style="max-width:700px;">
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">Contact Us</h2>
+
+      {% if success %}
+        <div class="alert alert-success text-center">
+          Your message has been sent successfully!
+        </div>
+      {% endif %}
+
+      <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="desc" class="form-label">Message</label>
+          <textarea class="form-control" id="desc" name="desc" rows="4" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <button class="btn btn-primary w-100" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
